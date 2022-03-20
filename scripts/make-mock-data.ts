@@ -1,7 +1,7 @@
 import fs = require('fs');
-import jsonPath from './json-path';
-import { content } from 'types/content';
-import { banner } from 'types/banner';
+import jsonPath from '../src/lib/json-path';
+import { content } from '../src/types/content';
+import { banner } from '../src/types/banner';
 
 const randomDate = (start: Date, end: Date) => {
   return new Date(

@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_PATH=src nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server.ts",
-    "mock:seed": "cross-env NODE_PATH=src ts-node src/lib/make-mock-data.ts"
+    "mock:seed": "cross-env NODE_PATH=scripts ts-node scripts/make-mock-data.ts"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
