@@ -1,6 +1,6 @@
 import { content } from 'types/content';
 
-export const sortByCompany = (contents: content[]): content[] => {
+export const orderByCompany = (contents: content[]): content[] => {
   contents.sort((a: content, b: content) => {
     const x = a.company.toLowerCase();
     const y = b.company.toLowerCase();
@@ -16,7 +16,7 @@ export const sortByCompany = (contents: content[]): content[] => {
   return contents;
 };
 
-export const sortByCreatedAt = (contents: content[]): content[] => {
+export const orderByCreatedAt = (contents: content[]): content[] => {
   contents.sort((a: content, b: content) => {
     if (a.createdAt < b.createdAt) {
       return 1;

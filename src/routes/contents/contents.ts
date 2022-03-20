@@ -1,7 +1,7 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 import * as Joi from 'joi';
 import jsonPath from 'lib/json-path';
-import { sortByCompany, sortByCreatedAt } from 'lib/sort-by';
+import { orderByCompany, orderByCreatedAt } from 'lib/order-by';
 
 import { content, query } from 'types/content';
 import getQuerySchema from './schema';
@@ -32,8 +32,8 @@ export default class ContentCtrl {
 
     const orderByContentList =
       orderBy === 'company'
-        ? sortByCompany(contentList)
-        : sortByCreatedAt(contentList);
+        ? orderByCompany(contentList)
+        : orderByCreatedAt(contentList);
 
     const returnContentList = orderByContentList.slice(
       offset,
