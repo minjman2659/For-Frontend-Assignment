@@ -8,7 +8,6 @@ const routes: FastifyPluginCallback = (fastify, options, done) => {
   });
 
   fastify.register(contentRouter, { prefix: '/contents' });
-
   fastify.register(bannerRouter, { prefix: '/banners' });
 
   done();

@@ -11,5 +11,5 @@ export type query = {
   limit: string;
   page: string;
   keyword: string;
-  sortBy: string;
+  orderBy: string;
 };

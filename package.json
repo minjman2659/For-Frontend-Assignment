@@ -6,7 +6,8 @@
   "author": "minjman2659 <minjman2659@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_PATH=src nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server.ts"
+    "dev": "cross-env NODE_PATH=src nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server.ts",
+    "mock:seed": "cross-env NODE_PATH=src ts-node src/lib/make-mock-data.ts"
   },
   "dependencies": {
     "cross-env": "^7.0.3",

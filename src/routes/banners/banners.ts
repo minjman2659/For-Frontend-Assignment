@@ -5,7 +5,7 @@ import jsonPath from 'lib/json-path';
 import { banner, query } from 'types/banner';
 import getQuerySchema from './schema';
 
-const mockBanners: banner[] = require(jsonPath('banners')).banners;
+const mockBanners: banner[] = require(jsonPath('banners'));
 
 export default class BannerCtrl {
   static getBannerList = async (

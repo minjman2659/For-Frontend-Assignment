@@ -5,7 +5,7 @@ const callback: FastifyPluginCallback = (fastify, opts, done) => {
   fastify.addHook('onRequest', (request, reply, done) => {
     const origin = request.headers.origin || request.headers.host;
 
-    reply.header('Access-Control-Allow-Origin', origin);
+    reply.header('Access-Control-Allow-Origin', origin); // origin: true
 
     reply.header(
       'Access-Control-Allow-Methods',

@@ -6,7 +6,7 @@ import { sortByCompany, sortByCreatedAt } from 'lib/sort-by';
 import { content, query } from 'types/content';
 import getQuerySchema from './schema';
 
-const mockContents: content[] = require(jsonPath('contents')).contents;
+const mockContents: content[] = require(jsonPath('contents'));
 
 export default class ContentCtrl {
   static getContentList = async (
@@ -20,7 +20,7 @@ export default class ContentCtrl {
       reply.status(400).send(validateResult.error.details[0].message);
     }
 
-    const { limit, page, sortBy, keyword } = req.query;
+    const { limit, page, orderBy, keyword } = req.query;
     const offset = (Number(page) - 1) * Number(limit);
 
     let contentList = mockContents;
@@ -30,12 +30,15 @@ export default class ContentCtrl {
       );
     }
 
-    const slicedContentList = contentList.slice(offset, offset + Number(limit));
+    const orderByContentList =
+      orderBy === 'company'
+        ? sortByCompany(contentList)
+        : sortByCreatedAt(contentList);
 
-    const returnContentList =
-      sortBy === 'company'
-        ? sortByCompany(slicedContentList)
-        : sortByCreatedAt(slicedContentList);
+    const returnContentList = orderByContentList.slice(
+      offset,
+      offset + Number(limit),
+    );
 
     reply.status(200).send(returnContentList);
   };
