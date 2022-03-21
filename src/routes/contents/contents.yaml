@@ -1,0 +1,77 @@
+openapi: '3.0.0'
+info:
+  title: 'Contents'
+  version: 1.0.0
+paths:
+  /api/contents:
+    get:
+      summary: '콘텐츠 리스트 조회하기'
+      tags: [Contents]
+      description: '콘텐츠 리스트 조회'
+      parameters:
+        - name: 'page'
+          in: 'query'
+          description: '조회할 콘텐츠 페이지'
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - name: 'limit'
+          in: 'query'
+          description: '조회할 콘텐츠 개수'
+          required: true
+          schema:
+            type: integer
+            example: 3
+        - name: 'orderBy'
+          in: 'query'
+          description: '조회할 콘텐츠 리스트의 순서 기준'
+          required: true
+          schema:
+            type: string
+            enum: ['createdAt', 'company']
+            example: 'createdAt'
+        - name: 'keyword'
+          in: 'query'
+          description: '회사 키워드'
+          required: true
+          schema:
+            type: string
+            example: '오'
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  example:
+                    [
+                      {
+                        id: 48,
+                        createdAt: '2021-11-19T02:11:41.631Z',
+                        updatedAt: '2021-11-19T02:11:41.631Z',
+                        thumbnail: 'https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/21919/4566f62b-ae61-4c79-972d-aa1d1649227e/푸들-배너.png',
+                        title: "자체 다회용기 '푸들 플레이트'와 다회용기 공유 서비스 '푸들'을 활용한 신규 사업 아이디어 제안",
+                        company: '바로 스튜디오',
+                      },
+                      {
+                        id: 21,
+                        createdAt: '2021-10-23T03:19:41.997Z',
+                        updatedAt: '2021-10-23T03:19:41.997Z',
+                        thumbnail: 'https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/23350/44ccf04f-0471-4ed6-bc14-f66cc1a4878e/오픈프레스미니인턴랜딩페이지-커버.png',
+                        title: '우리 동네 펫돌봄 커뮤니티, 펫봄 App의 활성화를 위한 마케팅 방안 및 서비스 개선 방안',
+                        company: '(주)오픈프레스',
+                      },
+                      {
+                        id: 25,
+                        createdAt: '2021-06-03T23:12:09.817Z',
+                        updatedAt: '2021-06-03T23:12:09.817Z',
+                        thumbnail: 'https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/22958/a83a3eb5-2643-43c7-8e61-0dde61d93653/오스랩스미니인턴랜딩페이지-커버-수정.png',
+                        title: '학원의 오프라인 기능을 ‘메타버스’에 구현하기 위한 서비스 및 운영 방안 기획',
+                        company: '(주)오스랩스',
+                      },
+                    ]
+        '400':
+          description: 'query가 충족되지 않을 경우'

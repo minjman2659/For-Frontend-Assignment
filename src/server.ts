@@ -17,7 +17,7 @@ async function Server() {
       return;
     }
     console.log(`Server is Running: ${address}`);
-    // console.log(`Swagger: ${address}/api/swagger`);
+    // console.log(`Swagger: ${address}/document`);
   });
 }
 
