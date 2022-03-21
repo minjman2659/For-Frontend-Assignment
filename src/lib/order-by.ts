@@ -5,10 +5,10 @@ export const orderByCompany = (contents: content[]): content[] => {
     const x = a.company.toLowerCase();
     const y = b.company.toLowerCase();
     if (x < y) {
-      return 1;
+      return -1;
     }
     if (x > y) {
-      return -1;
+      return 1;
     }
     return 0;
   });
