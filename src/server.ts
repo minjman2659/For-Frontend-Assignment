@@ -23,8 +23,6 @@ export function Server() {
     }
     console.log(`Server is Running: ${address}`);
   });
-
-  return server;
 }
 
 Server();
