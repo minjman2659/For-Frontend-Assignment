@@ -18,7 +18,7 @@ Node 16 혹은 그 이상의 버전이 필요합니다.
 (이미 `src/mock` 경로에 필요한 목업 데이터들이 생성되어 있기 때문에 따로 생성할 필요는 없습니다)
 
 ```javascript
- $ yarn mock:seed // make mock data
+ $ yarn create:mock // make mock data
 ```
 
 <br />
@@ -29,7 +29,8 @@ Node 16 혹은 그 이상의 버전이 필요합니다.
 
 **Method** : GET
 
-**Query** : 
+**Query** :
+
 ```javascript
 {
   imit: number, // 조회할 콘텐츠 개수 (required)
@@ -42,6 +43,7 @@ Node 16 혹은 그 이상의 버전이 필요합니다.
 **Return** : `orderBy === 'createdAt'` 일 때는 최신순, `orderBy === 'company'` 일 때는 회사 이름 기준 오름차순(ㄱ~ㅎ)
 
 Request가 `http://localhost:8080/api/contents?limit=2&page=1&orderBy=createdAt&keyword=오픈` 일 경우,
+
 ```javascript
 status : 200 OK
 
@@ -71,7 +73,8 @@ status : 200 OK
 
 **Method** : GET
 
-**Query** : 
+**Query** :
+
 ```javascript
 {
   imit: number, // 조회할 배너 개수 (required)
@@ -81,6 +84,7 @@ status : 200 OK
 **Return** :
 
 Request가 `http://localhost:8080/api/banners?limit=2` 일 경우,
+
 ```javascript
 status : 200 OK
 
