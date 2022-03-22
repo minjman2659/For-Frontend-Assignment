@@ -8,14 +8,15 @@
   "scripts": {
     "dev": "cross-env NODE_PATH=src nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node src/server.ts",
     "create:mock": "cross-env NODE_PATH=src ts-node src/mock/helper/make-mock-data.ts",
-    "test": "cross-env jest --coverage"
+    "test": "cross-env jest"
   },
   "dependencies": {
     "axios": "^0.26.1",
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
     "fastify": "^3.27.4",
-    "joi": "^17.6.0"
+    "joi": "^17.6.0",
+    "pino-pretty": "^7.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

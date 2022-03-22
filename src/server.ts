@@ -5,7 +5,12 @@ import { CustomCors } from 'plugins/custom-cors';
 const port = 8080;
 
 export function Server() {
-  const server = fastify({ logger: false });
+  const server = fastify({
+    logger: {
+      level: 'info',
+      prettyPrint: true,
+    },
+  });
 
   server.register(CustomCors);
 
