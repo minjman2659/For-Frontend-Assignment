@@ -1,3 +1,4 @@
+import fs = require('fs');
 import { FastifyRequest, FastifyReply } from 'fastify';
 import * as Joi from 'joi';
 import jsonPath from 'lib/json-path';
@@ -5,6 +6,11 @@ import jsonPath from 'lib/json-path';
 import { banner, query } from 'types/banner';
 import getQuerySchema from './schema';
 
+if (!fs.existsSync(jsonPath('banners'))) {
+  throw new Error(
+    '`$ yarn create:mock` 명령어를 입력하여 목업 데이터를 먼저 만들어 주세요.',
+  );
+}
 const mockBanners: banner[] = require(jsonPath('banners'));
 
 export default class BannerCtrl {

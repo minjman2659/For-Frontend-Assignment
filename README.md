@@ -49,20 +49,20 @@ status : 200 OK
 
 [
     {
-        "id": 28,
-        "createdAt": "2022-02-19T05:04:01.636Z",
-        "updatedAt": "2022-02-19T05:04:01.636Z",
-        "thumbnail": "https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/23131/a78bd8c1-de0b-431d-8578-2c5df477e75b/오픈놀커버이미지1.png",
-        "title": "진로/취업/청년 교육 프로그램 기획 및 운영방안 제안",
+        "id": 10,
+        "createdAt": "2021-09-14T10:20:23.622Z",
+        "updatedAt": "2021-09-14T10:20:23.622Z",
+        "thumbnail": "https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/24475/c4c8bbfb-6eef-4e58-a8ca-55b94708d0fa/오픈놀배배너-1.png",
+        "title": "미니인턴 서비스 활성화를 위한 아이디어 제안",
         "company": "오픈놀"
     },
     {
-        "id": 21,
-        "createdAt": "2021-12-07T11:58:51.937Z",
-        "updatedAt": "2021-12-07T11:58:51.937Z",
-        "thumbnail": "https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/23350/44ccf04f-0471-4ed6-bc14-f66cc1a4878e/오픈프레스미니인턴랜딩페이지-커버.png",
-        "title": "우리 동네 펫돌봄 커뮤니티, 펫봄 App의 활성화를 위한 마케팅 방안 및 서비스 개선 방안",
-        "company": "(주)오픈프레스"
+        "id": 9,
+        "createdAt": "2021-06-02T12:52:17.982Z",
+        "updatedAt": "2021-06-02T12:52:17.982Z",
+        "thumbnail": "https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/24618/20c33d3b-c9f8-4929-9893-6a125165416d/오픈놀배배너.png",
+        "title": "미니인턴 SNS 활성화를 위한 콘텐츠 기획 및 마케팅 방안 제안",
+        "company": "오픈놀"
     }
 ]
 ```
@@ -93,15 +93,15 @@ status : 200 OK
         "id": 1,
         "image": "https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/23810/e13bb4e0-a59a-445d-b1c5-b30a0297c246/miniintern1PC.png",
         "link": "https://miniintern.com/",
-        "createdAt": "2020-09-13T02:32:36.031Z",
-        "updatedAt": "2020-09-13T02:32:36.031Z"
+        "createdAt": "2021-07-01T12:09:12.629Z",
+        "updatedAt": "2021-07-01T12:09:12.629Z"
     },
     {
         "id": 2,
         "image": "https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/23810/e13bb4e0-a59a-445d-b1c5-b30a0297c246/miniintern1PC.png",
         "link": "https://miniintern.com/",
-        "createdAt": "2021-02-20T17:16:12.424Z",
-        "updatedAt": "2021-02-20T17:16:12.424Z"
+        "createdAt": "2021-11-29T23:08:55.701Z",
+        "updatedAt": "2021-11-29T23:08:55.701Z"
     }
 ]
 ```

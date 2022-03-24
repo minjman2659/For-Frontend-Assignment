@@ -1,3 +1,4 @@
+import fs = require('fs');
 import { FastifyRequest, FastifyReply } from 'fastify';
 import * as Joi from 'joi';
 import jsonPath from 'lib/json-path';
@@ -6,6 +7,11 @@ import { orderByCompany, orderByCreatedAt } from 'lib/order-by';
 import { content, query } from 'types/content';
 import getQuerySchema from './schema';
 
+if (!fs.existsSync(jsonPath('contents'))) {
+  throw new Error(
+    '`$ yarn create:mock` 명령어를 입력하여 목업 데이터를 먼저 만들어 주세요.',
+  );
+}
 const mockContents: content[] = require(jsonPath('contents'));
 
 export default class ContentCtrl {
