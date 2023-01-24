@@ -13,7 +13,7 @@
     "axios": "^0.26.1",
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
-    "fastify": "^3.27.4",
+    "fastify": "^3.29.4",
     "joi": "^17.6.0",
     "pino-pretty": "^7.5.4"
   },
